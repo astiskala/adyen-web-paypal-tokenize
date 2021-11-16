@@ -1,0 +1,54 @@
+export interface SelectItem {
+    disabled?: boolean;
+    icon?: string;
+    id: string;
+    name: string;
+    selectedOptionName?: string;
+}
+export interface SelectProps {
+    className: string;
+    classNameModifiers: string[];
+    filterable: boolean;
+    isInvalid: boolean;
+    isValid?: boolean;
+    items: SelectItem[];
+    name?: string;
+    onChange: (e: any) => void;
+    placeholder: string;
+    readonly: boolean;
+    selected: string;
+    uniqueId?: string;
+}
+export interface SelectButtonProps {
+    active: SelectItem;
+    filterInputRef: any;
+    filterable: boolean;
+    isInvalid: boolean;
+    isValid?: boolean;
+    onButtonKeyDown: (e: KeyboardEvent) => void;
+    onInput: (e: Event) => void;
+    placeholder: string;
+    readonly: boolean;
+    selectListId: string;
+    showList: boolean;
+    toggleButtonRef: any;
+    toggleList: (e: Event) => void;
+    id?: string;
+    ariaDescribedBy: string;
+}
+export interface SelectListProps {
+    active: SelectItem;
+    items: SelectItem[];
+    onKeyDown: (e: KeyboardEvent) => void;
+    onSelect: (e: Event) => void;
+    selectListId: string;
+    selectListRef: any;
+    showList: boolean;
+    textFilter: string;
+}
+export interface SelectItemProps {
+    item: SelectItem;
+    selected: boolean;
+    onKeyDown: (e: KeyboardEvent) => void;
+    onSelect: (e: Event) => void;
+}
